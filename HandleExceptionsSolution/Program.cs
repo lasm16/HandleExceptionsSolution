@@ -45,7 +45,7 @@ namespace HandleExceptionsSolution
         private static void ParseToInt(string key, string value)
         {
             switch (key)
-            {
+        {
                 case CoefficientA: _a = int.Parse(value); break;
                 case CoefficientB: _b = int.Parse(value); break;
                 case CoefficientC: _c = int.Parse(value); break;
@@ -140,7 +140,7 @@ namespace HandleExceptionsSolution
                 var x1 = GetX1(d, a, b);
                 Console.WriteLine($"x1 = {x1}");
                 var x2 = GetX2(d, a, b);
-                Console.WriteLine($"x1 = {x2}");
+                Console.WriteLine($"x2 = {x2}");
             }
             else if (d == 0)
             {
