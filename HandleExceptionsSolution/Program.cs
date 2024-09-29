@@ -45,7 +45,7 @@ namespace HandleExceptionsSolution
         private static void ParseToInt(string key, string value)
         {
             switch (key)
-            {
+        {
                 case CoefficientA: _a = int.Parse(value); break;
                 case CoefficientB: _b = int.Parse(value); break;
                 case CoefficientC: _c = int.Parse(value); break;
