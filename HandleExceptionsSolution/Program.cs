@@ -144,8 +144,8 @@ namespace HandleExceptionsSolution
             }
             else if (d == 0)
             {
-                var x1 = GetX1(d, a, b);
-                Console.WriteLine($"x = {x1}");
+                var x = GetX1(d, a, b);
+                Console.WriteLine($"x = {x}");
             }
             else
             {
