@@ -45,7 +45,7 @@ namespace HandleExceptionsSolution
         private static void ParseToInt(string key, string value)
         {
             switch (key)
-        {
+            {
                 case CoefficientA: _a = int.Parse(value); break;
                 case CoefficientB: _b = int.Parse(value); break;
                 case CoefficientC: _c = int.Parse(value); break;
@@ -58,10 +58,9 @@ namespace HandleExceptionsSolution
             Console.ForegroundColor = ConsoleColor.Gray;
         }
 
-        private static bool CheckInputCoefficients(IDictionary dictionary)
+        private static bool CheckInputCoefficients(IDictionary<string, string> dictionary)
         {
-            var dict = (Dictionary<string, string>)dictionary;
-            foreach (var pair in dict)
+            foreach (var pair in dictionary)
             {
                 try
                 {
@@ -100,7 +99,7 @@ namespace HandleExceptionsSolution
 
         }
 
-        private static void FormatData(string message, Severity severity, IDictionary data)
+        private static void FormatData(string message, Severity severity, IDictionary<string, string> data)
         {
             if (severity == Severity.Warning)
             {
@@ -116,7 +115,7 @@ namespace HandleExceptionsSolution
             var text = new StringBuilder(line + EndOfLine + message + EndOfLine + line + EndOfLine);
             Console.WriteLine(text);
 
-            var coefficientWithValue = (Dictionary<string, string>)data;
+            var coefficientWithValue = data;
             foreach (var pair in coefficientWithValue)
             {
                 Console.WriteLine(pair.Key + " = " + pair.Value);
@@ -125,12 +124,12 @@ namespace HandleExceptionsSolution
 
         private static double GetX1(int d, int a, int b)
         {
-            return (-b + (int)Math.Sqrt(d)) / 2 * a;
+            return (-b + (int)Math.Sqrt(d)) / (2 * a);
         }
 
         private static double GetX2(int d, int a, int b)
         {
-            return (-b - (int)Math.Sqrt(d)) / 2 * a;
+            return (-b - (int)Math.Sqrt(d)) / (2 * a);
         }
 
         private static void FindRoots(int d, int a, int b)
